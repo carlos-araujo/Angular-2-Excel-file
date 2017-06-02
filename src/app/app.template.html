@@ -1,0 +1,14 @@
+<form class="pure-form">
+    <input type="file" [(ngModel)]="files" [ngModelOptions]="{standalone: true}" (change)="fileChangeEvent($event)">
+</form>
+
+<table class="pure-table">
+    <thead>
+        <th *ngFor="let title of titles">{{title}}</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of rows">
+            <td *ngFor="let title of titles">{{row[title]}}</td>
+        </tr>
+    </tbody>
+</table>
